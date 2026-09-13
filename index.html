@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="徐日明 - AI Agent 工程师 | 专注大模型应用、RAG系统与智能体开发">
+    <title>徐日明 · AI Agent 工程师</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 噪点纹理覆盖层 -->
+    <div class="grain-overlay"></div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-mark">XR</span>
+                <span class="logo-text">徐日明</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">关于</a>
+                <a href="#skills" class="nav-link">技能</a>
+                <a href="#projects" class="nav-link">项目</a>
+                <a href="#contact" class="nav-link">联系</a>
+            </div>
+            <a href="assets/resume.pdf" class="nav-cta" download>
+                <span>下载简历</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+            </a>
+            <button class="nav-menu-btn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">关于</a>
+        <a href="#skills" class="mobile-link">技能</a>
+        <a href="#projects" class="mobile-link">项目</a>
+        <a href="#contact" class="mobile-link">联系</a>
+        <a href="assets/resume.pdf" class="mobile-link mobile-cta" download>下载简历</a>
+    </div>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-label reveal">
+                        <span class="label-dot"></span>
+                        <span>AI Agent 工程师 · 独立开发者</span>
+                    </div>
+                    <h1 class="hero-title reveal">
+                        <span class="title-line">用智能体</span>
+                        <span class="title-line">重构<span class="accent-text">人与信息</span></span>
+                        <span class="title-line">的连接方式</span>
+                    </h1>
+                    <p class="hero-desc reveal">
+                        我是徐日明，专注大模型应用与 AI Agent 开发。
+                        从 RAG 检索系统到多智能体协作，从微信小程序到 H5 全栈产品——
+                        让 AI 不止于对话，更能真正解决问题。
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>查看作品</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>联系我</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats reveal">
+                        <div class="stat-item">
+                            <div class="stat-num">5<span class="stat-plus">+</span></div>
+                            <div class="stat-label">AI 项目</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-num">85<span class="stat-percent">%</span></div>
+                            <div class="stat-label">推荐准确率</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-num">40<span class="stat-percent">%</span></div>
+                            <div class="stat-label">幻觉率降低</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card card-1 reveal-delay-1">
+                        <div class="card-header">
+                            <span class="card-dot red"></span>
+                            <span class="card-dot yellow"></span>
+                            <span class="card-dot green"></span>
+                            <span class="card-title">agent.py</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="code-line"><span class="code-key">class</span> <span class="code-class">AIAgent</span>:</div>
+                            <div class="code-line indent-1"><span class="code-key">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):</div>
+                            <div class="code-line indent-2">self.llm = <span class="code-class">ChatOpenAI</span>()</div>
+                            <div class="code-line indent-2">self.memory = <span class="code-class">Memory</span>()</div>
+                            <div class="code-line indent-2">self.tools = <span class="code-comment"># MCP tools</span></div>
+                            <div class="code-line blank"></div>
+                            <div class="code-line indent-1"><span class="code-key">def</span> <span class="code-func">react</span>(<span class="code-param">self, query</span>):</div>
+                            <div class="code-line indent-2"><span class="code-key">while</span> <span class="code-key">not</span> done:</div>
+                            <div class="code-line indent-3">thought = self.<span class="code-func">think</span>()</div>
+                            <div class="code-line indent-3">action = self.<span class="code-func">act</span>()</div>
+                            <div class="code-line indent-3">obs = self.<span class="code-func">observe</span>()</div>
+                            <div class="code-line indent-2"><span class="key">return</span> final_answer</div>
+                        </div>
+                    </div>
+                    <div class="visual-badge badge-1 reveal-delay-2">
+                        <div class="badge-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="badge-text">
+                            <div class="badge-title">LangGraph</div>
+                            <div class="badge-desc">多智能体编排</div>
+                        </div>
+                    </div>
+                    <div class="visual-badge badge-2 reveal-delay-3">
+                        <div class="badge-icon gold">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <div class="badge-text">
+                            <div class="badge-title">RAG System</div>
+                            <div class="badge-desc">双路召回 · CRAG</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>向下滚动</span>
+            </div>
+        </section>
+
+        <!-- 关于我 -->
+        <section id="about" class="about">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">01 / ABOUT</span>
+                    <h2 class="section-title">关于我</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text reveal">
+                        <p class="about-lead">
+                            我是一名<span class="highlight">AI Agent 工程师</span>，毕业于广东理工学院通信工程专业。
+                            在校期间专注于大模型应用开发，对 Agent 架构、RAG 系统和 Tool Calling 有深入实践。
+                        </p>
+                        <p>
+                            从 0 到 1 独立完成过多个 AI 项目——包括 RAG 检索优化系统、AI 商品助手、羽毛球鹰眼系统等。
+                            擅长将前沿 AI 技术落地为真实可用的产品，注重工程质量和用户体验。
+                        </p>
+                        <p>
+                            曾在威凯检测实习 9 个月，负责华为 HiCar 等项目测试，培养了严谨的工程化思维。
+                            相信好的 AI 产品 = 强大的模型能力 + 精巧的工程设计 + 深刻的用户理解。
+                        </p>
+                    </div>
+                    <div class="about-info reveal-delay-1">
+                        <div class="info-card">
+                            <div class="info-item">
+                                <span class="info-label">姓名</span>
+                                <span class="info-value">徐日明</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">职位</span>
+                                <span class="info-value">AI Agent 工程师</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">学校</span>
+                                <span class="info-value">广东理工学院</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">专业</span>
+                                <span class="info-value">通信工程</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">位置</span>
+                                <span class="info-value">中国 · 广州</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">状态</span>
+                                <span class="info-value status-available">
+                                    <span class="status-dot"></span>
+                                    开放机会
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能 -->
+        <section id="skills" class="skills">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">02 / SKILLS</span>
+                    <h2 class="section-title">技术栈</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category reveal">
+                        <div class="skill-icon ai-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6m0 10v6m11-11h-6M7 12H1m15.5-7.5l-4.2 4.2M7.7 16.3l-4.2 4.2m0-16.9l4.2 4.2m8.6 8.6l4.2 4.2"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">AI / Agent</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">MCP</span>
+                            <span class="skill-tag">Function Calling</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                            <span class="skill-tag">Embedding</span>
+                            <span class="skill-tag">LLM-Judge</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-delay-1">
+                        <div class="skill-icon code-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">开发语言</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-delay-2">
+                        <div class="skill-icon framework-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">框架 & 工具</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">ChromaDB</span>
+                            <span class="skill-tag">微信小程序</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Cloudflare</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal-delay-3">
+                        <div class="skill-icon product-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-title">产品能力</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">产品设计</span>
+                            <span class="skill-tag">PRD 撰写</span>
+                            <span class="skill-tag">UI/UX 理解</span>
+                            <span class="skill-tag">全栈开发</span>
+                            <span class="skill-tag">独立交付</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目 -->
+        <section id="projects" class="projects">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">03 / PROJECTS</span>
+                    <h2 class="section-title">精选项目</h2>
+                    <p class="section-desc">从 AI 系统到全栈产品，每一个项目都是对技术边界的探索</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- 项目 1: 高翠AI -->
+                    <article class="project-card reveal">
+                        <div class="project-image project-img-1">
+                            <div class="project-overlay">
+                                <span class="project-category">AI 商品助手</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">高翠 AI · 翡翠撮合平台</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                全球翡翠 AI 智能撮合平台，买家通过自然语言描述需求，AI 自动匹配对应商户翡翠货品。
+                                实现 CRAG 架构和四段式对话链路，Top-3 推荐准确率 85%+，幻觉率降低 40%。
+                            </p>
+                            <div class="project-tags">
+                                <span>RAG</span>
+                                <span>CRAG</span>
+                                <span>微信小程序</span>
+                                <span>LLM-Judge</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>85%+</strong>
+                                        <small>推荐准确率</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>40%</strong>
+                                        <small>幻觉率降低</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 项目 2: RAG系统 -->
+                    <article class="project-card reveal-delay-1">
+                        <div class="project-image project-img-2">
+                            <div class="project-overlay">
+                                <span class="project-category">RAG 系统</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">RAG 检索优化系统</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                企业级 RAG 系统，采用双路召回架构（关键词 + 向量），支持 OpenAI Embedding 和
+                                bge 本地模型双方案切换。实现 CRAG 纠错机制和 LLM-Judge 幻觉抑制。
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>ChromaDB</span>
+                                <span>Hybrid Search</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>双路</strong>
+                                        <small>召回架构</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>CRAG</strong>
+                                        <small>自动纠错</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 项目 3: 羽毛球鹰眼 -->
+                    <article class="project-card reveal-delay-2">
+                        <div class="project-image project-img-3">
+                            <div class="project-overlay">
+                                <span class="project-category">计算机视觉</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">AI 羽毛球鹰眼系统</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                基于深度学习的羽毛球轨迹分析系统，多模型 pipeline 搭建——YOLO 检测羽毛球 +
+                                姿态模型检测球员。支持 lightweight / balanced / performance 三档算力适配。
+                            </p>
+                            <div class="project-tags">
+                                <span>PyTorch</span>
+                                <span>YOLO</span>
+                                <span>RTMPose</span>
+                                <span>计算机视觉</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>3档</strong>
+                                        <small>算力切换</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>实时</strong>
+                                        <small>逐帧处理</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 项目 4: 数字人IP网站 -->
+                    <article class="project-card reveal">
+                        <div class="project-image project-img-4">
+                            <div class="project-overlay">
+                                <span class="project-category">前端产品</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">星语数字人 IP 网站</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                纯前端数字人 IP 展示网站，Canvas 粒子背景 + 全息投影数字人形象 + 交互式对话系统。
+                                支持语音动画、表情变化、打字机效果等丰富交互动效。
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Canvas</span>
+                                <span>动画</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>纯前端</strong>
+                                        <small>无框架依赖</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>响应式</strong>
+                                        <small>多端适配</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 项目 5: AI知库 -->
+                    <article class="project-card reveal-delay-1">
+                        <div class="project-image project-img-5">
+                            <div class="project-overlay">
+                                <span class="project-category">微信小程序</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">AI 知库 · 智能问答小程序</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                基于 RAG 的知识问答微信小程序，支持文档上传、智能检索、精准问答。
+                                用户端 + 商户管理端双系统，覆盖知识管理全流程。
+                            </p>
+                            <div class="project-tags">
+                                <span>微信小程序</span>
+                                <span>RAG</span>
+                                <span>知识管理</span>
+                                <span>双端系统</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>双端</strong>
+                                        <small>用户+商户</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>全栈</strong>
+                                        <small>独立交付</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 项目 6: 爬虫+PyTorch -->
+                    <article class="project-card reveal-delay-2">
+                        <div class="project-image project-img-6">
+                            <div class="project-overlay">
+                                <span class="project-category">深度学习</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header">
+                                <h3 class="project-title">爬虫 + PyTorch 图像分类</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                从零构建图像分类项目全流程：Python 爬虫采集训练数据 → 数据清洗与标注 →
+                                PyTorch 搭建 CNN 模型 → 训练调优 → 模型推理预测。
+                            </p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Scrapy</span>
+                                <span>PyTorch</span>
+                                <span>CNN</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-metrics">
+                                    <span class="metric">
+                                        <strong>全流程</strong>
+                                        <small>从数据到模型</small>
+                                    </span>
+                                    <span class="metric">
+                                        <strong>3类</strong>
+                                        <small>图像分类</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系 -->
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <div class="contact-content">
+                    <div class="contact-left reveal">
+                        <span class="section-tag">04 / CONTACT</span>
+                        <h2 class="contact-title">让我们<br><span class="accent-text">一起创造</span>点什么</h2>
+                        <p class="contact-desc">
+                            无论是 AI 项目合作、技术交流，还是求职机会，
+                            都欢迎随时联系我。我会在 24 小时内回复。
+                        </p>
+                        <div class="contact-methods">
+                            <a href="mailto:xuriming11@qq.com" class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">邮箱</span>
+                                    <span class="method-value">xuriming11@qq.com</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/xuriming11" target="_blank" rel="noopener" class="contact-method">
+                                <div class="method-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </div>
+                                <div class="method-info">
+                                    <span class="method-label">GitHub</span>
+                                    <span class="method-value">@xuriming11</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-right reveal-delay-1">
+                        <div class="contact-card">
+                            <div class="card-glow"></div>
+                            <div class="card-inner">
+                                <h3>下载完整简历</h3>
+                                <p>包含项目经历、技术栈详情、实习经历等完整信息</p>
+                                <a href="assets/resume.pdf" class="btn btn-primary btn-block" download>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <span>下载简历 PDF</span>
+                                </a>
+                                <div class="card-note">PDF 格式 · 中文</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">徐日明</span>
+                <p>AI Agent 工程师 · 用智能体创造价值</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/xuriming11" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+                <a href="mailto:xuriming11@qq.com" class="footer-link">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 徐日明. All rights reserved.</span>
+            <span>Built with ❤️ & AI</span>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" aria-label="回到顶部">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
